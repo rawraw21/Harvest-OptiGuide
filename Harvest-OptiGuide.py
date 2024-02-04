@@ -55,7 +55,7 @@ with st.sidebar:
     
     load_bootstrap()
 
-    image_path = r'E:\III RPLK\Pemrograman Paralel\Crop_Recommendation_System-main\Crop_Recommendation_System-main\logo.png'
+    image_path = r'logo.png'
     image = Image.open(image_path)
     st.image(image, caption='Logo Harvest Opti Guide', use_column_width=True)
 
@@ -93,13 +93,13 @@ with coly:
   
         """, unsafe_allow_html=True)
 
-df = pd.read_csv('E:\\III RPLK\\Pemrograman Paralel\\Crop_Recommendation_System-main\\Crop_Recommendation_System-main\\Crop_recommendation.csv')
-rdf_clf = joblib.load('E:\\III RPLK\\Pemrograman Paralel\\Crop_Recommendation_System-main\\Crop_Recommendation_System-main\\final_rdf_clf.pkl')
+df = pd.read_csv('Crop_recommendation.csv')
+rdf_clf = joblib.load('final_rdf_clf.pkl')
 
 X = df.drop('label', axis = 1)
 y = df['label']
 
-df_desc = pd.read_csv('E:\\III RPLK\\Pemrograman Paralel\\Crop_Recommendation_System-main\\Crop_Recommendation_System-main\\Crop_Desc.csv', sep = ';', encoding = 'utf-8', encoding_errors = 'ignore')
+df_desc = pd.read_csv('Crop_Desc.csv', sep = ';', encoding = 'utf-8', encoding_errors = 'ignore')
 
 st.markdown("<h5 style='text-align: center;'>Importance of each Feature in the Model:</h5>", unsafe_allow_html=True)
 
