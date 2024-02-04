@@ -1,0 +1,53 @@
+/* style.css */
+body {
+  background-color: #D2B48C; /* Warna hijau muda */
+}
+
+[data-testid="stAppViewContainer"] {
+  background-color: #D2B48C; /* Warna hijau muda */
+}
+
+[data-testid="stSidebar"] {
+  background-color: #98FB98; /* Warna coklat muda */
+}
+
+[data-testid="stHeader"] {
+  background-color: #D2B48C; /* Warna hijau muda */
+}
+
+[data-testid="stToolbar"] {
+  background-color: #D2B48C; /* Warna hijau muda */
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #D2B48C; /* Warna hijau muda */
+  border-radius: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #98FB98; /* Warna coklat muda */
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #98FB98; /* Warna coklat muda */
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #D2B48C; /* Warna hijau muda */
+}
