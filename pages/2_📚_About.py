@@ -5,7 +5,7 @@ brown_text = '<h1 style="color:brown;">About</h1>'
 
 st.markdown(brown_text, unsafe_allow_html=True)
 
-image_path = r'E:\III RPLK\Pemrograman Paralel\Crop_Recommendation_System-main\Crop_Recommendation_System-main\gambar.png'
+image_path = r'gambar.png'
 image = Image.open(image_path)
 st.image(image, use_column_width=True)
 
