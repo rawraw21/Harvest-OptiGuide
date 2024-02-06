@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the dataset
-df = pd.read_csv("E:\\III RPLK\\Pemrograman Paralel\\Crop_Recommendation_System-main\\Crop_Recommendation_System-main\\Crop_recommendation.csv")
+df = pd.read_csv("Crop_recommendation.csv")
 
 # Sidebar with dataset info
 st.sidebar.title("Dataset Information")
@@ -88,4 +88,4 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-local_css("E:\\III RPLK\\Pemrograman Paralel\\Crop_Recommendation_System-main\\Crop_Recommendation_System-main\\style.css")
+local_css("style.css")
