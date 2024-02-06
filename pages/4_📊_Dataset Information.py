@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the dataset
-df = pd.read_csv("Crop_recommendation.csv")
+df = pd.read_csv("E:\\III RPLK\\Pemrograman Paralel\\Crop_Recommendation_System-main\\Crop_Recommendation_System-main\\Crop_recommendation.csv")
 
 # Sidebar with dataset info
 st.sidebar.title("Dataset Information")
@@ -20,38 +20,26 @@ st.subheader("Crop Recommendation Dataset")
 st.dataframe(df)
 
 # Exploratory Data Analysis
-
 # Plot histograms for N, P, K
 st.subheader("Histograms for N, P, K")
-fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(15, 5))
-
-sns.histplot(df['N'], color='blue', kde=True, ax=ax1)
-ax1.set_title('Histogram for N')
-
-sns.histplot(df['P'], color='red', kde=True, ax=ax2)
-ax2.set_title('Histogram for P')
-
-sns.histplot(df['K'], color='green', kde=True, ax=ax3)
-ax3.set_title('Histogram for K')
-
+selected_elements = st.multiselect("Select elements", ["N", "P", "K"])
+colors = sns.color_palette("husl", len(selected_elements))
+fig, ax = plt.subplots(figsize=(10, 6))
+for selected_element, color in zip(selected_elements, colors):
+    sns.histplot(df[selected_element], color=color, kde=True, ax=ax, label=selected_element)
+ax.set_title('Histogram for N, P, K')
+ax.legend()
 st.pyplot(fig)
 
 # Plot histograms for pH, temperature, humidity, rainfall
 st.subheader("Histograms for pH, Temperature, Humidity, Rainfall")
-fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 8))
-
-sns.histplot(df['ph'], color='blue', kde=True, ax=ax1)
-ax1.set_title('Histogram for pH')
-
-sns.histplot(df['temperature'], color='red', kde=True, ax=ax2)
-ax2.set_title('Histogram for Temperature')
-
-sns.histplot(df['humidity'], color='purple', kde=True, ax=ax3)
-ax3.set_title('Histogram for Humidity')
-
-sns.histplot(df['rainfall'], color='green', kde=True, ax=ax4)
-ax4.set_title('Histogram for Rainfall')
-
+selected_weathers = st.multiselect("Select weather parameters", ["ph", "temperature", "humidity", "rainfall"])
+colors_weather = sns.color_palette("husl", len(selected_weathers))
+fig, ax = plt.subplots(figsize=(10, 6))
+for selected_weather, color in zip(selected_weathers, colors_weather):
+    sns.histplot(df[selected_weather], color=color, kde=True, ax=ax, label=selected_weather)
+ax.set_title('Histogram for pH, Temperature, Humidity, Rainfall')
+ax.legend()
 st.pyplot(fig)
 
 # Pivot table for NPK means by Crop
@@ -86,7 +74,6 @@ ph_boxplot.set_xlabel('Crop', fontsize=14)
 ph_boxplot.set_ylabel('pH', fontsize=14)
 ph_boxplot.axes.set_title('Boxplot - pH by Crop', fontsize=14)
 ph_boxplot.set_xticklabels(ax.get_xticklabels(), rotation=45)
-
 st.pyplot(fig)
 
 # Correlation heatmap
@@ -95,14 +82,10 @@ fig, ax = plt.subplots(figsize=(15, 9))
 sns.heatmap(df.drop('label', axis=1).corr(), annot=True, cmap='crest')
 ax.set(xlabel='Features', ylabel='Features')
 plt.title('Correlation between Numeric Features')
-
 st.pyplot(fig)
-
-
 
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-
-local_css("style.css")
+local_css("E:\\III RPLK\\Pemrograman Paralel\\Crop_Recommendation_System-main\\Crop_Recommendation_System-main\\style.css")
