@@ -25,7 +25,7 @@ Selain dari kondisi tanah, Aplikasi Rekomendasi Tanaman juga memperhitungkan fak
 **Langkah 3: Visualisasi dengan Chart 📈**
 Untuk memberikan gambaran yang lebih jelas, aplikasi menyajikan hasilnya dalam bentuk diagram garis. 🌾 Chart ini dengan sederhana menjelaskan seberapa besar pengaruh masing-masing faktor seperti Nitrogen, Fosfor, Kalium, dan pH terhadap rekomendasi tanaman yang diberikan oleh model Random Forest.
 
-Dengan pendekatan yang inovatif ini, para petani dapat dengan mudah mengakses rekomendasi yang disesuaikan dengan kondisi unik tanah dan cuaca mereka. 🌍 Hasil panen yang lebih baik dan pertanian yang efisien adalah tujuan utama dari Aplikasi Rekomendasi Tanaman ini.
+Dengan pendekatan yang inovatif ini, para petani dapat dengan mudah mengakses rekomendasi yang disesuaikan dengan kondisi tanah dan cuaca setempat. 🌍 Hasil panen yang lebih baik dan pertanian yang efisien adalah tujuan utama dari Aplikasi Rekomendasi Tanaman ini.
 
 Jadi, mari kita bersama-sama memasuki era pertanian yang cerdas dan efisien dengan teknologi yang melayani petani dan bumi kita. 🚜✨
 """)
