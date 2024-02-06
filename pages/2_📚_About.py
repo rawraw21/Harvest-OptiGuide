@@ -4,7 +4,7 @@ from PIL import Image
 st.title("Latar Belakang Harvest-OptiGuide")
 
 
-video_path = 'E:\\III RPLK\\Pemrograman Paralel\\Crop_Recommendation_System-main\\Crop_Recommendation_System-main\\video.mp4'
+video_path = 'video.mp4'
 
 
 
